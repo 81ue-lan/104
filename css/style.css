@@ -435,7 +435,8 @@ img{
 }
 .activity-txt-list li::before,
 .workplace-item::before,
-.colleagu-about-list li::before{
+.colleagu-about-list li::before,
+.brand-content-item::before{
     content: "";
     display: inline-block;
     width: 5px;
@@ -445,7 +446,7 @@ img{
     margin-right: 4px;
   }
 .activity-txt-list li::before, .workplace-item::before{ border-color: #ff9100;}
-.colleagu-about-list li::before{ border-color: #7e7e7e;}
+.colleagu-about-list li::before,.brand-content-item::before{ border-color: #7e7e7e;}
 .activity-small{
   width: 260px;
 }
@@ -528,10 +529,103 @@ img{
 .full-carousel .scroll-img{
   width: 1024px;
 }
-
-
-
-
+.brand-zone{
+  display: flex;
+  width: 1024px;
+  margin: auto;
+  border: 1px solid #ddd;
+}
+.brand-zone-list-large{
+  position: relative;
+  width: 522px;
+  height: 400px;
+  background-image: url(../images/brand-zone_freshBg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.brand-zone-tag{
+  position: absolute;
+  top: 10px;
+  left: 0;
+  padding: 15px;
+  font-size: 16px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.brand-zone-list-large .brand-content{
+  position: absolute;
+  left: 20px;
+  bottom: 35px;
+}
+.brand-content h3{
+  text-align: center;
+  font-weight: 700;
+  color: var(--black);
+}
+.brand-content-list{
+  margin-top: .5rem;
+}
+.brand-content-item {
+  margin-left: 15px;
+}
+.brand-content-item a{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--link);
+  line-height: 1.2;
+}
+.more-btn{
+  box-sizing: border-box;
+  width: 120px;
+  padding: 5px 0;
+  margin: 20px 15px;
+  border: 1px solid var(--enterprise-primary);
+  border-radius: 3px;
+  font-weight: 700;
+  color: var(--orange);
+  cursor: pointer;
+}
+.more-vacancy-btn{
+  display: none;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  color: var(--orange);
+  cursor: pointer;
+}
+.brand-zone-list-small{
+  display: flex;
+  flex-wrap: wrap;
+  width: 504px;
+}
+.brand-zone-list-small .brand-content-list{
+  display: none;
+}
+.brand-zone-list-small .brand-zone-item{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 10px;
+}
+.brand-zone-item a{
+  display: block;
+}
+.brand-slogan{
+  display: block;
+  margin-left: 14px;
+  font-size: 14px;
+  color: #7e7e7e;
+}
+.brand-zone-img{
+  width: 50%;
+  margin: auto;
+}
+.brand-zone-img img{
+  width: 100%;
+}
+.brand-content p{
+  font-size: 14px;
+  color: var(--black);
+}
 .hot-enterprise{
   width: 1016px;
   margin: auto;
@@ -692,30 +786,115 @@ img{
   display: flex;
   width: 1024px;
   margin: auto;
+  padding: 45px 0;
+}
+.footer-nav a{
+  color: var(--black);
 }
 .footer-app-list{
   width: 240px;
 }
 .footer-app-list li{
   width: 120px;
+  margin-top: 20px;
 }
 .footer-app-list img{
   width: 100%;
 }
 .footer-links-list{
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 784px;
+  row-gap: 50px;
+  font-size: 14px;
+}
+.footer-links-list::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+}
+.footer-nav h3{
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: 700;
 }
 .footer-links-item:nth-child(1){ width: 584px; }
 .footer-links-item:nth-child(2){ width: 200px; }
-
+.footer-links-item:nth-child(n+3){ margin-right: 45px; }
+.footer-links-item:nth-child(5){ margin-right: auto; }
+.footer-links-item:nth-child(6){ margin-right: 35px;}
 .service-overview-list,
 .about-list{
   display: flex;
   flex-wrap: wrap;
-  font-size: 14px;
+  gap: 5px 20px;
+}
+.service-overview-list{
+  width: 584px;
 }
 .service-overview-item{
   width: 124px;
+}
+.about-item{
+  width: 90px;
+}
+.footer-info{
+  width: 100%;
+  padding-bottom: 35px;
+  font-size: 12px;
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+.footer-info a{
+  color: var(--white);
+}
+.footer-info a:hover{
+  color: var(--primary-hover);
+}
+.footer-info-list,
+.company-info-list{
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+.footer-info-list{
+  font-weight: 700;
+  line-height: 6;
+}
+.footer-info-list li{
+  margin: 0 1rem;
+}
+.footer-info-list li:nth-child(n+2){
+  position: relative;
+}
+.footer-info-list li:nth-child(n+2)::before{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  top: 0;
+  bottom: 0;
+  left: -18px;
+  margin: auto;
+  background-color: #fff;
+}
+.company-info-list{
+  line-height: 2;
+}
+.company-info-list li{
+  margin: 0 .5rem;
+}
+.copyright a{
+  color: #7e7e7e;
+  font-weight: 700;
+}
+.copyright span{
+  margin-left: .5rem;
 }
